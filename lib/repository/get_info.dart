@@ -14,6 +14,7 @@ import 'package:http/http.dart' as http;
 
       return data;
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
@@ -28,6 +29,7 @@ import 'package:http/http.dart' as http;
 
       return data;
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }

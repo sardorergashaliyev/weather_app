@@ -268,12 +268,17 @@ class Day {
     this.dailyWillItSnow,
     this.dailyChanceOfSnow,
     this.condition,
+    // ignore: non_constant_identifier_names
+    this.mintemp_c,
     this.uv,
   });
 
   num? maxtempC;
+  // ignore: non_constant_identifier_names
+  num? mintemp_c;
   num? maxtempF;
   num? tempC;
+
   num? tempF;
   num? avgtempC;
   num? avgtempF;
@@ -294,6 +299,7 @@ class Day {
 
   factory Day.fromJson(Map<String, dynamic> json) => Day(
         maxtempC: json["maxtemp_c"],
+        mintemp_c: json['mintemp_c'],
         maxtempF: json["maxtemp_f"],
         tempC: json["temp_c"],
         tempF: json["temp_f"],

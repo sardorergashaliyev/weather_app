@@ -18,8 +18,8 @@ class HourItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 90,
-      margin: EdgeInsets.only(right: 24),
-      padding: EdgeInsets.all(24),
+      margin: const EdgeInsets.only(right: 24),
+      padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
           color: isActive
               ? Colors.blue.withOpacity(0.5)
@@ -27,7 +27,9 @@ class HourItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(16)),
       child: Column(
         children: [
-          Text((title ?? "").substring((title ?? "").indexOf(" ") + 1)),
+          Text(isActive
+              ? 'now'
+              : (title ?? "").substring((title ?? "").indexOf(" ") + 1)),
           Image.network("https:${image ?? ""}"),
           Text((temp ?? 0)
               .toString()
